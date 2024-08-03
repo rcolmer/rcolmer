@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', event => {
         formData.forEach((value, key) => {
             object[key] = value;
         });
-        object["access_key"] = "e4dc8e31-ae41-4966-8570-eb51afffa9db";
+        object["access_key"] = "b6ff97a0-4f23-4c35-b483-93fd59655ae7";
         var json = JSON.stringify(object);
         result.innerHTML = "Please wait...";
 

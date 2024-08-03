@@ -22,11 +22,17 @@
 
 <body id="page-top">
     <style>
-        .column-image img {
-            max-width: 15%;
-            height: auto;
+        .store-image img {
+            max-width: 50%;
+            max-height: 50%;
             padding: 5px;
             border-radius: 20%;
+        }
+
+        figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     </style>
     <!-- Navigation-->
@@ -41,42 +47,18 @@
                 class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#marshmallows">My Book</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#book">Debut Novel!</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About Me</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact Me</a></li>
             </ul>
         </div>
     </nav>
     <!-- Page Content-->
     <div class="container-fluid p-0">
-        <!-- About-->
-        <section class="resume-section" id="about">
+        <!-- Book-->
+        <section class="resume-section" id="book">
             <div class="resume-section-content">
-                <h1 class="mb-0">
-                    Rachel
-                    <span class="text-primary">Colmer</span>
-                </h1>
-                <p class="lead mb-5">Rachel Colmer was born in Sheffield and spent her childhood in Yorkshire and
-                    Hertfordshire. Having originally trained as a nursery nurse, she worked in London and then emigrated
-                    to Canada where she worked as a nanny. After her return to the UK, she gained an MA (Ed) and became
-                    an adult educator and trainer. During this time she undertook counselling training and subsequently
-                    became a bereavement counsellor. She is a mother and grandmother and lives in East Anglia with her
-                    husband.</p>
-                <p class="lead mb-5">Please use the navigation or scroll down to read about my debut novel, <i>Do
-                        Rabbits Eat Marshmallows?</i> and to contact me.</p>
-                <!-- <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a> -->
-                <div class="social-icons">
-                    <a class="social-icon" href="https://www.facebook.com/rachel.colmer.7"><i
-                            class="fab fa-facebook-f"></i></a>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Book -->
-        <section class="resume-section" id="marshmallows">
-            <div class="resume-section-content">
+                <h1 class="mb-0"><span class="text-primary">My Debut Novel!</span></h1>
                 <h2 class="mb-5">Do Rabbits Eat Marshmallows?</h2>
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="col-md-2">
@@ -84,40 +66,133 @@
                     </div>
                     <div class="container-fluid">
                         <p>Sarah-Jane and Andrew, as sister and brother, have always had each other and have therefore
-                            been able to weather the difficulties of their lives. Tom however, has carried guilt and
+                            been able to weather the difficulties of their lives. Tom, however, has carried guilt and
                             anger ever since he found out about his wife's illness. He tries hard to shut it all away
-                            but, when he meets his new neighbour Sarah-Jane, life takes an unexpected turn and he has at
+                            but, when he meets his new neighbour Sarah-Jane, life takes an unexpected turn and he has at
                             last to face his emotions and start the road to forgiveness. As his new life unfolds, life
-                            deals unexpected twists and turns and another devasting blow. </p>
+                            deals unexpected twists and turns and another devasting blow.</p>
                         <p>Is Tom able to find a way through his pain and so hold his loved ones together...?</p>
                     </div>
                 </div>
                 <div class="container">
-                    <p>Available in eBook from:</p>
-                    <div class="row">
-                        <div class="column-image">
-                            <a href="https://books.apple.com/gb/book/do-rabbits-eat-marshmallows/id6587575156"><img
-                                    src="assets/img/apple.png" alt="Apple"></a>
-                            <a href="https://www.kobo.com/gb/en/ebook/do-rabbits-eat-marshmallows"><img
-                                    src="assets/img/rakuten.png" alt="Rakuten"></a>
-                            <a href="https://www.everand.com/book/754368794/Do-Rabbits-Eat-Marshmallows"><img
-                                    src="assets/img/everand.png" alt="Everand"></a>
-                            <a href="https://www.thalia.de/shop/home/artikeldetails/A1072602807"><img
-                                    src="assets/img/thalia.jpg" alt="Thalia"></a>
-                            <a href="https://www.smashwords.com/books/view/1596519"><img src="assets/img/smashwords.jpg"
-                                    alt="Smashwords"></a>
+                    <p>Available as an Amazon Kindle eBook:</p>
+                    <select id="kindle">
+                        <option value="http://www.amazon.co.uk/dp/B0DBVW1ZDP">Amazon.co.uk</option>
+                        <option value="http://www.amazon.com/dp/B0DBVW1ZDP">Amazon.com</option>
+                        <option value="http://www.amazon.de/dp/B0DBVW1ZDP">Amazon.de</option>
+                        <option value="http://www.amazon.fr/dp/B0DBVW1ZDP">Amazon.fr</option>
+                        <option value="http://www.amazon.es/dp/B0DBVW1ZDP">Amazon.es</option>
+                        <option value="http://www.amazon.it/dp/B0DBVW1ZDP">Amazon.it</option>
+                        <option value="http://www.amazon.co.jp/dp/B0DBVW1ZDP">Amazon.co.jp</option>
+                        <option value="http://www.amazon.com.br/dp/B0DBVW1ZDP">Amazon.com.br</option>
+                        <option value="http://www.amazon.ca/dp/B0DBVW1ZDP">Amazon.ca</option>
+                        <option value="http://www.amazon.in/dp/B0DBVW1ZDP">Amazon.in</option>
+                        <option value="http://www.amazon.com.au/dp/B0DBVW1ZDP">Amazon.com.au</option>
+                        <option value="http://www.amazon.com.mx/dp/B0DBVW1ZDP">Amazon.com.mx</option>
+                        <option value="http://www.amazon.nl/dp/B0DBVW1ZDP">Amazon.nl</option>
+                    </select>
+                    <button id="goButton" class="btn btn-primary">Go</button>
+                </div>
+                <div class="container py-xl-3">
+                    <p>Also available from the following stores. Click on an icon to go to that store:</p>
+                    <div class="row store-image">
+                        <div class="col-md-2">
+                            <a href="https://books.apple.com/gb/book/do-rabbits-eat-marshmallows/id6587575156">
+                                <figure>
+                                    <img src="assets/img/apple.png" alt="Apple">
+                                    <figcaption>Apple</figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="https://www.kobo.com/gb/en/ebook/do-rabbits-eat-marshmallows">
+                                <figure>
+                                    <img src="assets/img/rakuten.png" alt="Rakuten">
+                                    <figcaption class="text-center">Rakuten</figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="https://www.everand.com/book/754368794/Do-Rabbits-Eat-Marshmallows">
+                                <figure>
+                                    <img src="assets/img/everand.png" alt="Everand">
+                                    <figcaption>Everand</figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="https://www.thalia.de/shop/home/artikeldetails/A1072602807">
+                                <figure>
+                                    <img src="assets/img/thalia.jpg" alt="Thalia">
+                                    <figcaption>Thalia</figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="https://www.smashwords.com/books/view/1596519">
+                                <figure>
+                                    <img src="assets/img/smashwords.jpg" alt="Smashwords">
+                                    <figcaption>Smashwords</figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
                             <a
-                                href="https://www.barnesandnoble.com/w/do-rabbits-eat-marshmallows-rachel-colmer/1146070727"><img
-                                    src="assets/img/barnes-and-noble.png" alt="Barnes & Noble"></a>
+                                href="https://www.barnesandnoble.com/w/do-rabbits-eat-marshmallows-rachel-colmer/1146070727">
+                                <figure>
+                                    <img src="assets/img/barnes-and-noble.png" alt="Barnes & Noble">
+                                    <figcaption>Barnes & Noble</figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
                             <a
-                                href="https://shop.vivlio.com/product/9798227339034_9798227339034_10020/do-rabbits-eat-marshmallowsij"><img
-                                    src="assets/img/vivlio.png" alt="Vivlio"></a>
-                            <a href="https://fable.co/book/x-9798227339034"><img src="assets/img/fable.png"
-                                    alt="fable"></a>
-                            <a href="https://market.thepalaceproject.org/item/6066844"><img src="assets/img/palace.png"
-                                    alt="Palace Marketplace"></a>
+                                href="https://shop.vivlio.com/product/9798227339034_9798227339034_10020/do-rabbits-eat-marshmallowsij">
+                                <figure>
+                                    <img src="assets/img/vivlio.png" alt="Vivlio">
+                                    <figcaption>Vivlio</figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="https://fable.co/book/x-9798227339034">
+                                <figure>
+                                    <img src="assets/img/fable.png" alt="fable">
+                                    <figcaption>fable</figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="https://market.thepalaceproject.org/item/6066844">
+                                <figure>
+                                    <img src="assets/img/palace.png" alt="Palace Marketplace">
+                                    <figcaption>Palace Marketplace</figcaption>
+                                </figure>
+                            </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- About -->
+        <section class="resume-section" id="about">
+            <div class="resume-section-content">
+                <h2 class="mb-5">About Me</h2>
+                <p class="lead mb-5">I was born in Sheffield to Welsh parents and my childhood was spent in Yorkshire,
+                    Hertfordshire and South Wales. Having left school at 16, I worked as a Community Service Volunteer
+                    in three different residential settings, working with children and adults. I went on to train as a
+                    nursery nurse, and worked as a staff nursery nurse in a deprived area of London. Following this, I
+                    emigrated to Canada where I worked as a nanny, travelling extensively in North America. After my
+                    return to the UK, I gained an MA (Ed) and became an adult educator and trainer. During this time I
+                    undertook counselling training and subsequently became a bereavement counsellor. I am a mother and
+                    grandmother and live in East Anglia with my husband.</p>
+                <!-- <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a> -->
+                <div class="social-icons">
+                    <a class="social-icon" href="https://www.facebook.com/rachel.colmer.7"><i
+                            class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
         </section>
@@ -172,6 +247,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <script>
+        document.getElementById("goButton").addEventListener("click", function () {
+            const selectedUrl = document.getElementById("kindle").value;
+            window.location.href = selectedUrl;
+        });  
+    </script>
 </body>
 
 </html>
