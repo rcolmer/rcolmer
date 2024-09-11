@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <div class="container">
-                    <p>Available as an Amazon Kindle eBook:</p>
+                    <p>Available as an Amazon Kindle eBook:
                     <select id="kindle">
                         <option value="http://www.amazon.co.uk/dp/B0DBVW1ZDP">Amazon.co.uk</option>
                         <option value="http://www.amazon.com/dp/B0DBVW1ZDP">Amazon.com</option>
@@ -91,7 +91,24 @@
                         <option value="http://www.amazon.com.mx/dp/B0DBVW1ZDP">Amazon.com.mx</option>
                         <option value="http://www.amazon.nl/dp/B0DBVW1ZDP">Amazon.nl</option>
                     </select>
-                    <button id="goButton" class="btn btn-primary">Go</button>
+                    <button id="kindleButton" class="btn btn-primary">Go</button></p>
+                    <p>or as a paperback:
+                        <select id="paperback">
+                            <option value="http://www.amazon.co.uk/dp/B0DGFQBHYM">Amazon.co.uk</option>
+                            <option value="http://www.amazon.com/dp/B0DGFQBHYM">Amazon.com</option>
+                            <option value="http://www.amazon.de/dp/B0DGFQBHYM">Amazon.de</option>
+                            <option value="http://www.amazon.fr/dp/B0DGFQBHYM">Amazon.fr</option>
+                            <option value="http://www.amazon.es/dp/B0DGFQBHYM">Amazon.es</option>
+                            <option value="http://www.amazon.it/dp/B0DGFQBHYM">Amazon.it</option>
+                            <option value="http://www.amazon.co.jp/dp/B0DGFQBHYM">Amazon.co.jp</option>
+                            <option value="http://www.amazon.com.br/dp/B0DGFQBHYM">Amazon.com.br</option>
+                            <option value="http://www.amazon.ca/dp/B0DGFQBHYM">Amazon.ca</option>
+                            <option value="http://www.amazon.in/dp/B0DGFQBHYM">Amazon.in</option>
+                            <option value="http://www.amazon.com.au/dp/B0DGFQBHYM">Amazon.com.au</option>
+                            <option value="http://www.amazon.com.mx/dp/B0DGFQBHYM">Amazon.com.mx</option>
+                            <option value="http://www.amazon.nl/dp/B0DGFQBHYM">Amazon.nl</option>
+                        </select>
+                        <button id="paperbackButton" class="btn btn-primary">Go</button></p>
                 </div>
                 <div class="container py-xl-3">
                     <p>Also available from the following stores. Click on an icon to go to that store:</p>
@@ -248,8 +265,12 @@
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <script>
-        document.getElementById("goButton").addEventListener("click", function () {
+        document.getElementById("kindleButton").addEventListener("click", function () {
             const selectedUrl = document.getElementById("kindle").value;
+            window.open(selectedUrl, '_blank');
+        });  
+        document.getElementById("paperbackButton").addEventListener("click", function () {
+            const selectedUrl = document.getElementById("paperback").value;
             window.open(selectedUrl, '_blank');
         });  
     </script>
