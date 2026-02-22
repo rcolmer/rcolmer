@@ -31,9 +31,13 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Load reviews
+    loadReviews();
+
     const form = document.getElementById("form");
     const result = document.getElementById("result");
 
+    if (form) {
     form.addEventListener("submit", function (e) {
         const formData = new FormData(form);
         e.preventDefault();
@@ -77,5 +81,34 @@ window.addEventListener('DOMContentLoaded', event => {
                 }, 5000);
             });
     });
+    }
 
 });
+
+function loadReviews() {
+    fetch('data/reviews.json')
+        .then(response => response.json())
+        .then(data => {
+            const debutContainer = document.getElementById('debut-reviews-container');
+            if (debutContainer && data.debut) {
+                let html = '';
+                data.debut.forEach((review, index) => {
+                    const activeClass = index === 0 ? 'active' : '';
+                    html += `
+                        <div class="carousel-item ${activeClass}">
+                            <div class="text-center px-4">
+                                <blockquote class="review-quote fst-italic mb-3">
+                                    "${review.text}"
+                                </blockquote>
+                                <cite class="review-author d-block fw-bold text-secondary">
+                                    - ${review.author} <span class="fw-normal">(${review.source})</span>
+                                </cite>
+                            </div>
+                        </div>
+                    `;
+                });
+                debutContainer.innerHTML = html;
+            }
+        })
+        .catch(error => console.error('Error loading reviews:', error));
+}

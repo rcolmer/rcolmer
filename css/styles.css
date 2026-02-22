@@ -10996,3 +10996,15 @@ section.resume-section .resume-section-content {
   font-weight: bold;
   color: #666;
 }
+
+/* Responsive Review Text */
+.review-quote {
+    font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+    .review-quote {
+        font-size: 1rem;
+    }
+}
+
